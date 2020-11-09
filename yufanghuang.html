@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>迴圈練習 - 黃郁芳 Yu Fang Huang</title>
+</head>
+
+<body>
+    <h1>20201107 回家作業</h1>
+    <h2>黃郁芳 Yu Fang Huang</h2>
+
+  <script>  
+    // 1. 置左對齊
+    function printStars(count) {
+      let str = '';
+      let i, j;
+      
+      for(i = 1; i <= count; i++) {
+        for(j = 1; j <= i; j++) {
+          str += '*';
+        }
+        str += '\n';
+      }
+      console.log(`1. 置左對齊 \n${str}`);
+    }
+    printStars(5);
+
+
+    // 2. 置右對齊
+    // 請參考 printStars，
+    // 並完成 printStars2，使其執行時結果如圖： https://imgur.com/56BptSu
+    function printStars2(count) {
+      // todo...
+      let str = '';
+      let i, j;
+      let k;
+
+      for (i = 1; i <= count; i++) {
+        // console.log(count - i);
+
+        for (k = count - 1; k >= i; k--) {
+          // console.log(k);
+          str += ' ';
+        }
+        for (j = 1; j <= i; j++) {
+          // console.log(j);
+          str += '*';
+        }
+
+        str += '\n';
+      }
+      console.log(`2. 置右對齊 \n${str}`);
+    }
+    printStars2(5);
+
+
+    // 3. 聖誕樹
+    function printStars3(count) {
+      let str = '';
+      let i, j;
+      let k;
+      let l;
+      
+      for (i = 1; i <= count; i++) {
+        for (k = count - 1; k >= i; k--) {
+          // console.log(k);
+          str += ' ';
+        }
+
+        for (j = 1; j <= i; j++) {
+          // console.log(j);
+          str += '*';
+        }
+
+        for (l = 2; l <= i; l++) {
+          // console.log(l);
+          str += '*';
+        }
+
+        str += '\n';
+      }
+      console.log(`3. 聖誕樹 \n${str}`);
+    }
+    printStars3(5);
+
+
+    // 4. 倒三角置左對齊
+    function printStars4(count) {
+      let str = '';
+      let i, j;
+
+      for (i = 1; i <= count; i++) {
+        for (j = count; j >= i; j--) {
+          str += '*';
+        }
+        str += '\n';
+      }
+      console.log(`4. 倒三角置左對齊 \n${str}`);
+    }
+    printStars4(5);
+
+
+    // 5. 倒三角置右對齊
+    function printStars5(count) {
+      // todo...
+      let str = '';
+      let i, j;
+      let k;
+
+      for (i = 1; i <= count; i++) {
+        for (k = 2; k <= i; k++) {
+          str += ' ';
+        }
+
+        for (j = count; j >= i; j--) {
+          str += '*';
+        }
+        str += '\n';
+      }
+      console.log(`5. 倒三角置右對齊 \n${str}`);
+    }
+    printStars5(5);
+
+    // 6. 倒聖誕樹
+    function printStars6(count) {
+      let str = '';
+      let i, j;
+      let k;
+      let l;
+
+      // 01234
+      for (i = 1; i <= count; i++) {
+        for (k = 2; k <= i; k++) {
+          str += ' ';
+        }
+
+        // 54321
+        for (j = count; j >= i; j--) {
+          str += '*';
+        }
+
+        // 43210
+        for (l = count-1; l >= i; l--) {
+          // console.log(l);
+          str += '*';
+        }
+
+        str += '\n';
+      }
+      console.log(`6. 倒聖誕樹 \n${str}`);
+    }
+    printStars6(5);
+  </script>
+
+</body>
+
+</html>
